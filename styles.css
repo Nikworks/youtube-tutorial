@@ -31,10 +31,12 @@ header h1 {
 nav ul {
     display: flex;
     list-style: none;
+    flex-wrap: wrap;
 }
 
 nav ul li {
     margin-right: 20px;
+    margin-bottom: 10px;
 }
 
 nav a {
@@ -57,8 +59,8 @@ main {
 }
 
 section {
-    margin-bottom: 30px;
-    padding-bottom: 20px;
+    margin-bottom: 40px;
+    padding-bottom: 30px;
     border-bottom: 1px solid #eee;
 }
 
@@ -69,23 +71,71 @@ section:last-child {
 h2 {
     color: #FF0000;
     margin-bottom: 15px;
+    font-size: 1.8rem;
+}
+
+h3 {
+    color: #333;
+    margin: 20px 0 10px;
+    font-size: 1.4rem;
+}
+
+p {
+    margin-bottom: 15px;
 }
 
 ol, ul {
     margin-left: 20px;
     margin-top: 10px;
+    margin-bottom: 20px;
 }
 
 li {
-    margin-bottom: 5px;
+    margin-bottom: 8px;
+}
+
+strong {
+    font-weight: bold;
+}
+
+/* Section-specific styles */
+#video-seo, #analytics, #community, #shorts {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+#video-seo h3, #analytics h3, #community h3, #shorts h3 {
+    padding-bottom: 5px;
+    border-bottom: 2px solid #eee;
+}
+
+#video-seo ul, #analytics ul, #community ul, #shorts ul {
+    list-style-type: circle;
 }
 
 /* Footer Styles */
 footer {
     text-align: center;
-    margin-top: 20px;
+    margin-top: 30px;
     padding: 15px;
     background-color: #333;
     color: white;
     border-radius: 5px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+    
+    nav ul {
+        flex-direction: column;
+    }
+    
+    nav ul li {
+        margin-bottom: 5px;
+    }
 }
